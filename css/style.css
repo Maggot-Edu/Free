@@ -18,6 +18,7 @@
 html {
     font-size: 62.5%; /* Inicio 1rem = 10px */
     box-sizing: border-box;
+    scroll-snap-type: y proximity;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -150,6 +151,10 @@ h1, h2, h3 {
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: 0.5rem;
+}
+.servicios, .menu-principal, .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 @media (min-width: 768px) {
     .servicios {
