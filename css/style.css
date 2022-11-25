@@ -11,6 +11,7 @@
 2- Inicio menu principal
 3- Inicio Cabecera e imagen
 4- Contenido principal
+5- Formulario Contacto
 */
 /******************************1************************************/
 /* Inicio GLOBALES */
@@ -58,6 +59,7 @@ h1, h2, h3 {
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none; /*boton enviar*/
 }
 @media (min-width: 768px){
     .boton {
@@ -92,8 +94,24 @@ h1, h2, h3 {
     background-color: var(--principal);
     color: var(--oscuro);
     font-weight: bold;
+    cursor: pointer;
 }
 /* Fin menu principal */
+/*Utilidades*/
+.w-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-d{
+    justify-content: flex-end;
+}
 /******************************3************************************/
 /* Inicio Cabecera e imagen */
 .hero {
@@ -162,3 +180,60 @@ h1, h2, h3 {
     align-items: center;
 }
 /* Inicio contenido principal */
+/******************************5************************************/
+/* Inicio Formulario Contacto */
+.formulario{
+    background-color: var(--gris);
+    width: min(80rem, 100%); /*Coge el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .campos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3), .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--oscuro );
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea {
+    height: 15rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+/* Fin Formulario Contacto */
+/******************************6************************************/
+/*Inicio footer*/
+footer {
+    text-align: center;
+}
+/*Fin footer*/
